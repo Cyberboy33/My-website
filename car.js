@@ -1,18 +1,13 @@
-var wind1x = 250;
-var wind2x = 288;
-var wind3x = 362;
-var wind4x = 383;
-var wind5x = 456;
-var wind6x = 474;
 var manx = 128;
+var mans = 0.5;
 var carx = 0;
-var cars = -2;
+var cars = 2;
+var r = 237;
+var g = 32;
+var b = 36;
 
 function setup() {
   createCanvas(500, 500);
-  r = random(255)
-  g = random(255)
-  b = random(255)
 }
 
 function draw() {
@@ -57,7 +52,6 @@ function draw() {
   strokeWeight(2);
   fill(r, g, b);
   
-  
   beginShape();
   vertex(carx + 158, 298);
   vertex(carx + 230, 298);
@@ -70,7 +64,7 @@ function draw() {
   endShape(CLOSE);
   
   noStroke();
-  //front window
+  
   fill(0);
   beginShape();
   vertex(carx + 250, 292);
@@ -79,7 +73,6 @@ function draw() {
   vertex(carx + 362, 292);
   endShape(CLOSE);
   
-  //back window
   beginShape();
   vertex(carx + 383, 292);
   vertex(carx + 383, 245);
@@ -89,15 +82,15 @@ function draw() {
   
 carx = carx - cars;
   
+  manx = manx - mans;
+if(manx <=78 || manx >= 158){
+  mans *= -1;
+}
+  
   if(carx <= -500){
-  carx = 350
-  r = random(255)
-  g = random(255)
-  b = random(255)
-  }
-    
-  manx =  manx - mans
-  if(manx <= 78 || manx >= 158){
-    mans = -mans;
+    carx = 350;
+    r = random(255);
+    g = random(255);
+    b = random(255);
   }
 }
