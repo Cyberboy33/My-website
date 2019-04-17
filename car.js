@@ -7,7 +7,8 @@ var g = 32;
 var b = 36;
 
 function setup() {
-  createCanvas(windowWidth, 500);
+  var canvas = createCanvas(windowWidth, 500);
+  canvas.parent('header');
 }
 
 function draw() {
