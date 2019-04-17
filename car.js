@@ -22,7 +22,7 @@ function draw() {
   
   //road
   fill(43, 43, 43);
-  rect(0, 331, 500, 38);
+  rect(0, 331, windowWidth, 38);
   
   //booth
   fill(114, 115, 115);
@@ -88,7 +88,7 @@ if(manx <=78 || manx >= 158){
 }
   
   if(carx <= -500){
-    carx = 350;
+    carx = windowWidth-150;
     r = random(255);
     g = random(255);
     b = random(255);
