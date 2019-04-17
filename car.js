@@ -7,7 +7,7 @@ var g = 32;
 var b = 36;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(windowWidth, 500);
 }
 
 function draw() {
