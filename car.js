@@ -19,7 +19,7 @@ function draw() {
   
   //ground
   fill(175,127,44);
-  rect(0, 250, 500, 250);
+  rect(0, 250, windowWidth, 250);
   
   //road
   fill(43, 43, 43);
